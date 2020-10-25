@@ -5,7 +5,6 @@ import socket
 def get_accessible_ports(address, min_port, max_port):
     found_ports = []
 
-    # write code here
     for port in range(min_port, max_port):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(5)
@@ -24,7 +23,6 @@ def main(argv):
         print("port {} is open".format(p))
 
 # This makes sure the main function is not called immediatedly
-# when TMC imports this module
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         print('usage: python %s address min_port max_port' % sys.argv[0])
